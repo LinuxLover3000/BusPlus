@@ -237,6 +237,17 @@ goto start
 )
 :route
 cls
+set /a rtlngm1=(%rtlng%-1)
+set /a rtlngm2=(%rtlng%-2)
+set /a rtlngm3=(%rtlng%-3)
+set /a rtlngm4=(%rtlng%-4)
+set /a rtlngm5=(%rtlng%-5)
+set /a rtlngm6=(%rtlng%-6)
+set /a rtlngm7=(%rtlng%-7)
+set /a rtlngm8=(%rtlng%-8)
+set /a rtlngm9=(%rtlng%-9)
+set /a rtlngm10=(%rtlng%-10)
+set /a rtlngm11=(%rtlng%-11)
 set 1=%%a
 set 2=%%b
 set 3=%%c
@@ -251,7 +262,44 @@ set 11=%%k
 echo BusPlus
 echo.
 echo Route %route%
-if 
+if %rtlngm10%==1 (
+echo *%1%*...%2%...%3%...%4%...%5%...%6%...%7%...%8%...%9%...%10%...%11%.
+)
+if %rtlngm9%==1 (
+echo *%1%*...%2%...%3%...%4%...%5%...%6%...%7%...%8%...%9%...%10%.
+)
+if %rtlngm8%==1 (
+echo *%1%*...%2%...%3%...%4%...%5%...%6%...%7%...%8%...%9%.
+)
+if %rtlngm7%==1 (
+echo *%1%*...%2%...%3%...%4%...%5%...%6%...%7%...%8%.
+)
+if %rtlngm6%==1 (
+echo *%1%*...%2%...%3%...%4%...%5%...%6%...%7%.
+)
+if %rtlngm5%==1 (
+echo *%1%*...%2%...%3%...%4%...%5%...%6%.
+)
+if %rtlngm4%==1 (
+echo *%1%*...%2%...%3%...%4%...%5%.
+)
+if %rtlngm3%==1 (
+echo *%1%*...%2%...%3%...%4%.
+)
+if %rtlngm2%==1 (
+echo *%1%*...%2%...%3%.
+)
+if %rtlngm1%==1 (
+echo *%1%*...%2%.
+)
+echo.
+echo Press any key to advance to the next stop.
+pause>nul
+cls
+echo BusPlus
+echo.
+echo Route %route%
+echo 
 :view
 cls
 echo BusPlus
